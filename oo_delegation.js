@@ -7,6 +7,7 @@ var Task = {
     setID: function (ID) {
         this.id = ID;
     },
+
     outputID: function () {
         console.log('Task ID: ' + this.id);
     }

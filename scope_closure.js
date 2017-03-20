@@ -27,6 +27,43 @@ plusOne(41); // 42 <-- 1 + 41
 plusTen(13); // 23 <-- 10 + 13
 
 
+
+// closure
+(function () {
+    var secret = 0;
+
+    var getValue = function () {
+        return secret;
+    };
+
+    var setValue = function (v) {
+        if (typeof v === "number") {
+            secret = v;
+        }
+    };
+
+    return api = { s: setValue, g: getValue };
+}())
+api.s(42);
+api.g(); // 42
+
+
 /*
     closure: ITERATORS
+    Make an iterator with closure.
 */
+function setup(x) {
+    var i = 0;
+    return function() {
+        return x[i++];
+    };
+}
+
+// first, pass an array to setup
+var next = setup(['a', 'b', 'c']);
+
+// call it
+next(); // 'a'
+next(); // 'b'
+next(); // 'c'
+next(); // undefined

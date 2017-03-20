@@ -1,6 +1,6 @@
-'use strict';
-
 // FUNCTIONS
+
+'use strict';
 
 /*
     default params

@@ -1,3 +1,6 @@
+// FUNCTIONS
+// recursion
+
 /*
 Consider this puzzle: by starting from the number 1 and repeatedly
 either adding 5 or multiplying by 3, an infinite amount of new numbers
