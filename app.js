@@ -1,1 +1,1 @@
-// oo
+'use strict';

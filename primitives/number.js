@@ -1,13 +1,60 @@
 // NUMBER
 
+
+
+
+Number.EPSILON; // 2e-52
+Number.MAX_VALUE; // 1.798e+308
+Number.MIN_VALUE; // 5e-324
+Number.MAX_SAFE_INTEGER; // 9,007,199,254,740,991
+Number.MIN_SAFE_INTEGER; // -9,007,199,254,740,991
+Number.POSITIVE_INFINITY; // Infinity
+Number.NEGATIVE_INFINITY; // -Infinity
+
+1 / 0; // Infinity
+-1 / 0; // -Infinity
+
+
+Number.isInteger(42); // true
+Number.isInteger(42.000); // true
+Number.isInteger(42.3); // false
+
+Number.isSafeInteger(Number.MAX_SAFE_INTEGER); // true
+Number.isSafeInteger(Math.pow(2, 53)); // false
+Number.isSafeInteger(Math.pow(2, 53) - 1); // true
+
+5 / Infinity; // 0
+-5 / Infinity // -0
+1 / -0; // -Infinity
+1 / -Infinity; // -0
+Infinity === -Infinity; //false
+
+var zero = 0 / -3;
+zero.toString(); // "0"
+a + ""; // "0"
+String(a); // "0
+
++"-0"; // -0
+Number("-0"); // -0
+JSON.parse("-0"); // -0
+JSON.stringify(-0) // "0"
+- 0 == 0; // true
+Object.is(-0, 0); // false
+
+
+
+
+// isNan
 var num = "abc";
 if (isNan(num)) console.log('not a number');
+NaN === NaN; //false (!)
 
-// parseInt : only parse number from beginning of string, until first non-number
+
+// parseInt
+// only parse number from beginning of string, until first non- number
 num = parseInt("12abc"); // 12
 // supply radix:
 parseInt('111', 2); // 7
-
 
 // coercion
 var a = '12';
@@ -15,8 +62,6 @@ var num = +a; // 12
 num = Number(a); // 12
 3 + '5' // "35"
 5 + 3 + '5' // "85"
-
-
 
 // Math
 var x = 200.6;
@@ -59,6 +104,7 @@ function isNumber(value) {
 isNumber('12'); // false
 isNumber(NaN); // false
 isNumber(Infinity); // true
+
 
 
 /*
