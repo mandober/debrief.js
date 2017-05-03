@@ -35,23 +35,6 @@ var i4 = str.replace(regex, 'experiment'); // "it is an experiment of an experim
 // comparision
 // lowercase is BEFORE uppercase
 
-
-/*
-tagged templates
-*/
-function transform(strings, ...substitutes) {
-    console.log(strings[0]); // "My name is"
-    console.log(substitutes[0]); // Bond
-}
-
-var firstname = "James";
-var lastname = "Bond";
-
-// to function call as:
-// transform(["Name is ", ", ", " "], firstname, lastname)
-transform`My name is ${lastname}, ${firstname} ${lastname}`;
-
-
 // substr()
 var str = 'abcdefghij';
 console.log('(1, 2): ' + str.substr(1, 2));   // '(1, 2): bc'
@@ -60,7 +43,6 @@ console.log('(-3): ' + str.substr(-3));     // '(-3): hij'
 console.log('(1): ' + str.substr(1));      // '(1): bcdefghij'
 console.log('(-20, 2): ' + str.substr(-20, 2)); // '(-20, 2): ab'
 console.log('(20, 2): ' + str.substr(20, 2));  // '(20, 2): '
-
 
 //substring()
 var anyString = 'Mozilla';

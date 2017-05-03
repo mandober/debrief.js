@@ -1,4 +1,6 @@
-// OBJECTS
+'use strict';
+// objects
+
 
 // objects always create a copy of the reference
 // on assignment or passing (pass-by-reference)
